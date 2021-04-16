@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript</title>
+  <style>
+
+    .table {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -257px;
+      margin-left: -257px;
+    }
+
+    .table td {
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      text-align: center;
+      font-size: 1vw;
+      cursor: pointer;
+    }
+
+    .list {
+      max-width: 750px;
+      margin: 0 auto;
+      list-style: none;
+      background-color: #fff;
+      padding: 0;
+    }
+
+    .list-item {
+      display: flex;
+      display: -webkit-flex;
+      -webkit-justify-content: flex-start;
+      justify-content: flex-start;
+      border-bottom: 2px solid #ddd;
+    }
+    .list-item > * {
+      width: 50px;
+      padding: 5px 10px;
+      text-align: center;
+    }
+    .list-item *:last-child {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+    }
+    .problem{
+      width: 30px;
+      height: 30px;
+    }
+    .answer_corner{
+      width: 30px;
+      height: 30px;
+      padding: 100px  40px;
+    }
+  </style>
+</head>
+<body>
+  <table class="table">
+    <tr>
+      <td id="00"></td>
+      <td id="01"></td>
+      <td id="02"></td>
+      <td id="03"></td>
+      <td id="04"></td>
+      <td id="05"></td>
+      <td id="06"></td>
+      <td id="07"></td>
+      <td id="08"></td>
+      <td id="09"></td>
+      <td id="010"></td>
+    </tr>
+    <tr>
+      <td id="10"></td>
+      <td><input id="11" class="problem" type="text" value=""></td>
+      <td><input id="12" class="problem" type="text" value=""></td>
+      <td><input id="13" class="problem" type="text" value=""></td>
+      <td><input id="14" class="problem" type="text" value=""></td>
+      <td><input id="15" class="problem" type="text" value=""></td>
+      <td><input id="16" class="problem" type="text" value=""></td>
+      <td><input id="17" class="problem" type="text" value=""></td>
+      <td><input id="18" class="problem" type="text" value=""></td>
+      <td><input id="19" class="problem" type="text" value=""></td>
+      <td><input id="110" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="20"></td>
+      <td><input id="21" class="problem" type="text" value=""></td>
+      <td><input id="22" class="problem" type="text" value=""></td>
+      <td><input id="23" class="problem" type="text" value=""></td>
+      <td><input id="24" class="problem" type="text" value=""></td>
+      <td><input id="25" class="problem" type="text" value=""></td>
+      <td><input id="26" class="problem" type="text" value=""></td>
+      <td><input id="27" class="problem" type="text" value=""></td>
+      <td><input id="28" class="problem" type="text" value=""></td>
+      <td><input id="29" class="problem" type="text" value=""></td>
+      <td><input id="210" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="30"></td>
+      <td><input id="31" class="problem" type="text" value=""></td>
+      <td><input id="32" class="problem" type="text" value=""></td>
+      <td><input id="33" class="problem" type="text" value=""></td>
+      <td><input id="34" class="problem" type="text" value=""></td>
+      <td><input id="35" class="problem" type="text" value=""></td>
+      <td><input id="36"class="problem" type="text" value=""></td>
+      <td><input id="37" class="problem" type="text" value=""></td>
+      <td><input id="38" class="problem" type="text" value=""></td>
+      <td><input id="39" class="problem" type="text" value=""></td>
+      <td><input id="310" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="40"></td>
+      <td><input id="41" class="problem" type="text" value=""></td>
+      <td><input id="42" class="problem" type="text" value=""></td>
+      <td><input id="43" class="problem" type="text" value=""></td>
+      <td><input id="44" class="problem" type="text" value=""></td>
+      <td><input id="45" class="problem" type="text" value=""></td>
+      <td><input id="46" class="problem" type="text" value=""></td>
+      <td><input id="47" class="problem" type="text" value=""></td>
+      <td><input id="48" class="problem" type="text" value=""></td>
+      <td><input id="49" class="problem" type="text" value=""></td>
+      <td><input id="410" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="50"></td>
+      <td><input id="51" class="problem" type="text" value=""></td>
+      <td><input id="52" class="problem" type="text" value=""></td>
+      <td><input id="53" class="problem" type="text" value=""></td>
+      <td><input id="54" class="problem" type="text" value=""></td>
+      <td><input id="55" class="problem" type="text" value=""></td>
+      <td><input id="56" class="problem" type="text" value=""></td>
+      <td><input id="57" class="problem" type="text" value=""></td>
+      <td><input id="58" class="problem" type="text" value=""></td>
+      <td><input id="59" class="problem" type="text" value=""></td>
+      <td><input id="510" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="60"></td>
+      <td><input id="61"t class="problem" type="text" value=""></td>
+      <td><input id="62" class="problem" type="text" value=""></td>
+      <td><input id="63" class="problem" type="text" value=""></td>
+      <td><input id="64" class="problem" type="text" value=""></td>
+      <td><input id="65" class="problem" type="text" value=""></td>
+      <td><input id="66" class="problem" type="text" value=""></td>
+      <td><input id="67" class="problem" type="text" value=""></td>
+      <td><input id="68" class="problem" type="text" value=""></td>
+      <td><input id="69"class="problem" type="text" value=""></td>
+      <td><input id="610" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="70"></td>
+      <td><input id="71" class="problem" type="text" value=""></td>
+      <td><input id="72" class="problem" type="text" value=""></td>
+      <td><input id="73" class="problem" type="text" value=""></td>
+      <td><input id="74" class="problem" type="text" value=""></td>
+      <td><input id="75" class="problem" type="text" value=""></td>
+      <td><input id="76" class="problem" type="text" value=""></td>
+      <td><input id="77" class="problem" type="text" value=""></td>
+      <td><input id="78" class="problem" type="text" value=""></td>
+      <td><input id="79" class="problem" type="text" value=""></td>
+      <td><input id="710" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="80"></td>
+      <td><input id="81" class="problem" type="text" value=""></td>
+      <td><input id="82" class="problem" type="text" value=""></td>
+      <td><input id="83" class="problem" type="text" value=""></td>
+      <td><input id="84" class="problem" type="text" value=""></td>
+      <td><input id="85" class="problem" type="text" value=""></td>
+      <td><input id="86" class="problem" type="text" value=""></td>
+      <td><input id="87" class="problem" type="text" value=""></td>
+      <td><input id="88" class="problem" type="text" value=""></td>
+      <td><input id="89" class="problem" type="text" value=""></td>
+      <td><input id="810" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="90"></td>
+      <td><input id="91" class="problem" type="text" value=""></td>
+      <td><input id="92" class="problem" type="text" value=""></td>
+      <td><input id="93" class="problem" type="text" value=""></td>
+      <td><input id="94" class="problem" type="text" value=""></td>
+      <td><input id="95" class="problem" type="text" value=""></td>
+      <td><input id="96" class="problem" type="text" value=""></td>
+      <td><input id="97" class="problem" type="text" value=""></td>
+      <td><input id="98" class="problem" type="text" value=""></td>
+      <td><input id="99" class="problem" type="text" value=""></td>
+      <td><input id="910" class="problem" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td id="100"></td>
+      <td><input id="101" class="problem" type="text" value=""></td>
+      <td><input id="102" class="problem" type="text" value=""></td>
+      <td><input id="103" class="problem" type="text" value=""></td>
+      <td><input id="104" class="problem" type="text" value=""></td>
+      <td><input id="105" class="problem" type="text" value=""></td>
+      <td><input id="106" class="problem" type="text" value=""></td>
+      <td><input id="107" class="problem" type="text" value=""></td>
+      <td><input id="108" class="problem" type="text" value=""></td>
+      <td><input id="109" class="problem" type="text" value=""></td>
+      <td><input id="1010" class="problem" type="text" value=""></td>
+    </tr>
+  </table>
+  <div class="answer_corner">
+    <input id="submit_corner"　style="width:90%" type="button" value="提出!">
+  </div>
+  <script src="massing.js"></script>
+</body>
+</html>
